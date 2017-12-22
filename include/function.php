@@ -2,7 +2,7 @@
 	
 	function getDevice() 
 	{
-		$con=mysqli_connect("localhost","root","","fingerprint");
+		$con=mysqli_connect("localhost","root","linux1978","biometric_bulalohan");
 		$sql 	= 'SELECT * FROM demo_device ORDER BY device_name ASC';
 		$result	= mysqli_query($con, $sql);
 		$arr 	= array();
@@ -24,7 +24,7 @@
 	
 	function getDeviceAcSn($vc) 
 	{
-		$con=mysqli_connect("localhost","root","","fingerprint");
+		$con=mysqli_connect("localhost","root","linux1978","biometric_bulalohan");
 		$sql 	= "SELECT * FROM demo_device WHERE vc ='".$vc."'";
 		$result	= mysqli_query($con, $sql);
 		$arr 	= array();
@@ -46,7 +46,7 @@
 	
 	function getDeviceBySn($sn) 
 	{
-		$con=mysqli_connect("localhost","root","","fingerprint");
+		$con=mysqli_connect("localhost","root","linux1978","biometric_bulalohan");
 		$sql 	= "SELECT * FROM demo_device WHERE sn ='".$sn."'";
 		$result	= mysqli_query($con, $sql);
 		$arr 	= array();
@@ -68,7 +68,7 @@
 
 	function getUser()
 	{
-		$con=mysqli_connect("localhost","root","","payroll");
+		$con=mysqli_connect("localhost","root","linux1978","payroll");
 		$sql 	= 'SELECT * FROM employees ORDER BY employee_no ASC';
 		$result	= mysqli_query($con, $sql);
 		$arr 	= array();
@@ -88,7 +88,7 @@
 
 	function deviceCheckSn($sn) 
 	{
-		$con=mysqli_connect("localhost","root","","fingerprint");
+		$con=mysqli_connect("localhost","root","linux1978","biometric_bulalohan");
 		$sql 	= "SELECT count(sn) as ct FROM demo_device WHERE sn = '".$sn."'";
 		$result	= mysqli_query($con, $sql);
 		$data 	= mysqli_fetch_array($result);
@@ -102,7 +102,7 @@
 
 	function checkUserName($user_name) 
 	{
-		$con=mysqli_connect("localhost","root","","fingerprint");
+		$con=mysqli_connect("localhost","root","linux1978","biometric_bulalohan");
 		$sql	= "SELECT user_name FROM demo_user WHERE user_name = '".$user_name."'";
 		$result	= mysqli_query($con, $sql);
 		$row	= mysqli_num_rows($result);
@@ -116,7 +116,7 @@
 
 	function getUserFinger($user_id) 
 	{
-		$con=mysqli_connect("localhost","root","","fingerprint");
+		$con=mysqli_connect("localhost","root","linux1978","biometric_bulalohan");
 		$sql 	= "SELECT * FROM demo_finger WHERE user_id= '".$user_id."' ";
 		$result = mysqli_query($con, $sql);
 		$arr 	= array();
@@ -138,7 +138,7 @@
 	
 	function getLog() 
 	{
-		$con=mysqli_connect("localhost","root","","fingerprint");
+		$con=mysqli_connect("localhost","root","linux1978","biometric_bulalohan");
 		$sql 	= 'SELECT * FROM demo_log ORDER BY log_time DESC';
 		$result	= mysqli_query($con, $sql);
 		$arr 	= array();
@@ -161,7 +161,7 @@
 
 	function createLog($user_name, $time, $sn) 
 	{
-		$con=mysqli_connect("localhost","root","","fingerprint");
+		$con=mysqli_connect("localhost","root","linux1978","biometric_bulalohan");
 		$sq1  = "INSERT INTO demo_log SET user_name='".$user_name."', data='".date('Y-m-d H:i:s', strtotime($time))." (PC Time) | ".$sn." (SN)"."' ";
 		$result1	= mysqli_query($con, $sq1);
 		if ($result1) {
