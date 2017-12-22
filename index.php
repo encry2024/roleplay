@@ -24,7 +24,6 @@
 					<ul class="nav navbar-nav">
 						<li><a href="#" onclick="load('<?php echo $base_path?>device.php?action=index')">Device</a></li>
 						<li><a href="#" onclick="load('<?php echo $base_path?>user.php?action=index')">User</a></li>
-						<li><a href="#" onclick="load('<?php echo $base_path?>login.php?action=index')">Login</a></li>
 						<li><a href="#" onclick="load('<?php echo $base_path?>log.php?action=index')">Log</a></li>
 					</ul>
 				</div><!--/.nav-collapse -->

@@ -92,12 +92,6 @@
 			}
 
 		</script>
-
-		<div class="row">
-			<div class="col-md-12">
-				<button type="button" class="btn btn-success" onclick="load('<?php echo $base_path; ?>user.php?action=create')">Add</button>
-			</div>
-		</div>
 		<br>
 
 <?php
@@ -134,7 +128,7 @@
 
 				} else {
 					
-					$verification = "<a href='finspot:FingerspotVer;$url_verification' class='btn btn-xs btn-success' id='login_btn'>Login</a>";
+					$verification = "<a href='finspot:FingerspotVer;$url_verification' class='btn btn-xs btn-success' id='login_btn'>Log</a>";
 					
 				}
 
